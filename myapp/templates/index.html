@@ -1,7 +1,2350 @@
+
+
 {% extends 'base.html' %}
+
+{% load static %}
 
 {% block body %}
 
-<h1>Hello World!</h1>
+  <!--Start Main Slider Four-->
+        <section class="main-slider-four">
+            <div class="main-slider-four__carousel owl-carousel owl-theme">
+
+                 {% for i in mainslider %}
+                <!--Start Main Slider Four Single-->
+                <div class="main-slider-four__single">
+                    <div class="main-slider-four__bg"
+                        style="background-image: url('/static/assets/images/slider/slider-v4-img1.jpg');"></div>
+                    <div class="shape1 float-bob-x"><img src="{{ i.background_image.url }}" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="main-slider-four__content">
+                            <div class="tagline">
+                                <span>{{ i.tagline|safe }}</span>
+                            </div>
+                            <div class="title-box">
+                                <h2>{{ i.title|safe }}</h2>
+                            </div>
+                            <div class="text-box">
+                                <p>{{ i.description|safe }}</p>
+                            </div>
+
+                            <div class="main-slider-four__btn">
+                                <a class="thm-btn" href="contact-1.html">{{ i.thm_text|safe }}
+                                    <i class="icon-next"></i>
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Main Slider Four Single-->
+
+                <!--Start Main Slider Four Single-->
+                <div class="main-slider-four__single">
+                    <div class="main-slider-four__bg"
+                        style="background-image: url('/static/assets/images/slider/slider-v4-img2.jpg');"></div>
+                    <div class="shape1 float-bob-x"><img src="{%static 'assets/images/shapes/main-slider-v4-shape1.png' %}" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="main-slider-four__content">
+                            <div class="tagline">
+                                <span>Welcome to Cleanin.</span>
+                            </div>
+                            <div class="title-box">
+                                <h2>Cleanin a cleaning <br> company.</h2>
+                            </div>
+                            <div class="text-box">
+                                <p>We are committed to the best quality in the field of industrial cleaning, home
+                                    and <br> garden cleaning.</p>
+                            </div>
+
+                            <div class="main-slider-four__btn">
+                                <a class="thm-btn" href="contact-1.html">Take Our Service
+                                    <i class="icon-next"></i>
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Main Slider Four Single-->
+
+                <!--Start Main Slider Four Single-->
+                <div class="main-slider-four__single">
+                    <div class="main-slider-four__bg"
+                        style="background-image: url('/static/assets/images/slider/slider-v4-img3.jpg');"></div>
+                    <div class="shape1 float-bob-x"><img src="{% static 'assets/images/shapes/main-slider-v4-shape1.png' %}" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="main-slider-four__content">
+                            <div class="tagline">
+                                <span>Welcome to Cleanin.</span>
+                            </div>
+                            <div class="title-box">
+                                <h2>So Fresh & So Clean <br> We Promise!</h2>
+                            </div>
+                            <div class="text-box">
+                                <p>We are committed to the best quality in the field of industrial cleaning, home
+                                    and <br> garden cleaning.</p>
+                            </div>
+
+                            <div class="main-slider-four__btn">
+                                <a class="thm-btn" href="contact-1.html">Take Our Service
+                                    <i class="icon-next"></i>
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 {% endfor %}
+                <!--End Main Slider Four Single-->
+            </div>
+
+            <div class="main-slider__form">
+                <div class="main-slider__form-bg"
+                    style="background-image: url('/static/assets/images/pattern/main-slider-form-bg.png');"></div>
+
+                <div class="title-box">
+                    <h2>Request A Free Estimate</h2>
+                </div>
+                <form method="post" action="https://unicktheme.com/2025/cleanin/main-html/index.html">
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Your Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" value="" name="form_email" required="">
+                    </div>
+                    <div class="form-group">
+                        <div class="select-box">
+                            <select class="selectmenu wide">
+                                <option selected="selected">Choose Services</option>
+                                <option>House Cleaning</option>
+                                <option>Office Cleaning</option>
+                                <option>Kitchen Cleaning</option>
+                                <option>Window Cleaning</option>
+                                <option>Car Cleaning</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="button-box">
+                                <button class="thm-btn" type="submit" data-loading-text="Please wait...">
+                                    Submit Reaquest Now
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--End Main Slider Four-->
+        {% endblock %}
+
+
+        <!--Start About Five-->
+        <section class="about-five">
+            <div class="shape1 float-bob-x"><img src="{% static 'assets/images/shapes/about-v5-shape1.png' %}" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <!--Start About Five Img-->
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="about-five__img clearfix">
+                            <div class="about-five__img1">
+                                <div class="about-five__img1-inner">
+                                    <img src="{% static 'assets/images/about/about-v5-img1.jpg' %}" alt="" />
+                                </div>
+                                <div class="experince-box">
+                                    <h2>25 +Years Experince</h2>
+                                </div>
+                            </div>
+                            <div class="about-five__img2">
+                                <img src="{% static 'assets/images/about/about-v5-img2.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!--End About Five Img-->
+
+                    <!--Start About Five Content-->
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="about-five__content">
+                            <div class="sec-title sec-title-animation animation-style2">
+                                <div class="sec-title__tagline">
+                                    <div class="icon-box">
+                                        <span class="icon-household"></span>
+                                    </div>
+
+                                    <div class="text title-animation">
+                                        <h4>About Cleaning Agency</h4>
+                                    </div>
+                                </div>
+                                <h2 class="sec-title__title title-animation">We Are A Highly Experienced <br> Cleaning
+                                    Service Company
+                                </h2>
+                            </div>
+
+                            <div class="about-five__content-text1">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which
+                                    don't look even slightly believable. If you are going to use a passage of Lorem
+                                    Ipsum, you need.</p>
+                            </div>
+
+                            <div class="about-five__content-text2">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="about-five__content-text2-single">
+                                            <div class="about-five__content-text2-single-top">
+                                                <div class="icon-box">
+                                                    <span class="icon-window-cleaner"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h2>Commercial Cleaning <br> Services</h2>
+                                                </div>
+                                            </div>
+
+                                            <ul class="about-five__content-text2-single-list">
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> We are Committed</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> Highly Rated Cleaning</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> Quality cleaning system</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="about-five__content-text2-single">
+                                            <div class="about-five__content-text2-single-top">
+                                                <div class="icon-box">
+                                                    <span class="icon-cleaning"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h2>Residential Cleaning <br> Services</h2>
+                                                </div>
+                                            </div>
+
+                                            <ul class="about-five__content-text2-single-list">
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> Office Refresh Package</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> Kitchen Clean-Up Crew</p>
+                                                </li>
+                                                <li>
+                                                    <p><span class="icon-checkmark"></span> Experienced Team</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-five__content-bottom">
+                                <div class="btn-box">
+                                    <a class="thm-btn" href="about-1.html">More About Us
+                                        <i class="icon-next"></i>
+                                        <span class="hover-btn hover-bx"></span>
+                                        <span class="hover-btn hover-bx2"></span>
+                                        <span class="hover-btn hover-bx3"></span>
+                                        <span class="hover-btn hover-bx4"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End About Five Content-->
+                </div>
+            </div>
+        </section>
+        <!--End About Five-->
+
+        <!--Start Services Five-->
+        <section class="services-five">
+            <div class="services-five__pattern"
+                style="background-image: url('/static/assets/images/pattern/services-v5-pattern.png');"></div>
+            <div class="container">
+                <div class="sec-title text-center sec-title-animation animation-style1">
+                    <div class="sec-title__tagline center">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Our Services</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">We Provide Best Service</h2>
+                </div>
+
+                <div class="row">
+                    <div class="services-five__carousel owl-carousel owl-theme thm-dot-style1">
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img1.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-bed"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Bedroom Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img2.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaning"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Window Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img3.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-house"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Office Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img4.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaner"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Commercial Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img5.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-house-2"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">House Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img6.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-car-wash"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Car Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img1.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-bed"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Bedroom Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img2.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaning"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Window Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img3.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-house"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Office Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img4.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaner"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Commercial Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img5.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-house-2"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">House Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img6.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-car-wash"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Car Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img1.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-bed"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Bedroom Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img2.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaning"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Window Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img3.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-house"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Office Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+
+                        <!--Start Services Five Single-->
+                        <div class="services-five__single">
+                            <div class="services-five__single-img">
+                                <div class="services-five__single-img-inner">
+                                    <img src="{% static 'assets/images/services/services-v5-img4.jpg' %}" alt="" />
+                                </div>
+                                <div class="icon">
+                                    <span class="icon-window-cleaner"></span>
+                                </div>
+                            </div>
+                            <div class="services-five__single-content text-center">
+                                <h2><a href="house-cleaning.html">Commercial Cleaning</a></h2>
+                                <p>We provide janitorial and this <br>specialized is services.</p>
+                                <div class="btn-box">
+                                    <a href="house-cleaning.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Five Single-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Services Five-->
+
+        <!--Start Sliding Text One-->
+        <section class="sliding-text-one">
+            <div class="sliding-text-one__wrap">
+                <ul class="sliding-text-one__list marquee_mode">
+                    <li>
+                        <h2 data-hover="Modern Cleaning Equipments" class="sliding-text-one__title"> Modern Cleaning
+                            Equipments
+                            <img src="assets/images/shapes/sliding-text-shape-1.png" alt=""></h2>
+                    </li>
+                    <li>
+                        <h2 data-hover="100% Satisfied Customer" class="sliding-text-one__title"> 100% Satisfied
+                            Customer
+                            <img src="assets/images/shapes/sliding-text-shape-1.png" alt=""></h2>
+                    </li>
+                    <li>
+                        <h2 data-hover=" 24/7 Customer Service" class="sliding-text-one__title"> 24/7 Customer Service
+                            <img src="assets/images/shapes/sliding-text-shape-1.png" alt=""></h2>
+                    </li>
+                    <li>
+                        <h2 data-hover="Need an appointment for Cleaning Service
+                            " class="sliding-text-one__title">Need an appointment for Cleaning Service
+
+                            <img src="assets/images/shapes/sliding-text-shape-1.png" alt=""></h2>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--End Sliding Text One-->
+
+        <!--Start Pricing Plan One-->
+        <section class="pricing-plan-one">
+            <div class="pricing-plan-one__pattern"
+                style="background-image: url(assets/images/pattern/pricing-v1-pattern.png);"></div>
+            <div class="container">
+                <div class="sec-title sec-title-animation animation-style2">
+                    <div class="sec-title__tagline">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Pricing Plan</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">We are offering the best <br> pricing to help you!
+                    </h2>
+                </div>
+
+                <div class="pricing-plan-one__tab tabs-box">
+                    <ul class="tab-buttons clearfix">
+                        <li data-tab="#weekly" class="tab-btn active-btn">
+                            <h3>Weekly</h3>
+                        </li>
+                        <li data-tab="#monthly" class="tab-btn">
+                            <h3>Monthly</h3>
+                        </li>
+                        <li data-tab="#yearly" class="tab-btn">
+                            <h3>Yearly</h3>
+                        </li>
+                    </ul>
+                    <div class="tabs-content">
+                        <!--Start Single Tab Content-->
+                        <div class="tab active-tab" id="weekly">
+                            <div class="pricing-plan-one__single-tab">
+                                <div class="pricing-plan-one__single-tab-inner">
+                                    <div class="row">
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Basic Plan</h3>
+                                                        </div>
+                                                        <h2>$215.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>1 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Standard Plan</h3>
+                                                        </div>
+                                                        <h2>$315.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Premium Plan</h3>
+                                                        </div>
+                                                        <h2>$515.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>5 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Tab Content-->
+
+                        <!--Start Single Tab Content-->
+                        <div class="tab" id="monthly">
+                            <div class="pricing-plan-one__single-tab">
+                                <div class="pricing-plan-one__single-tab-inner">
+                                    <div class="row">
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Basic Plan</h3>
+                                                        </div>
+                                                        <h2>$315.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>1 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Standard Plan</h3>
+                                                        </div>
+                                                        <h2>$415.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Premium Plan</h3>
+                                                        </div>
+                                                        <h2>$615.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>5 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Tab Content-->
+
+                        <!--Start Single Tab Content-->
+                        <div class="tab" id="yearly">
+                            <div class="pricing-plan-one__single-tab">
+                                <div class="pricing-plan-one__single-tab-inner">
+                                    <div class="row">
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Basic Plan</h3>
+                                                        </div>
+                                                        <h2>$215.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>1 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Standard Plan</h3>
+                                                        </div>
+                                                        <h2>$315.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>2 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+
+                                        <!--Start Single Pricing Plan One-->
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="pricing-plan-one__single">
+                                                <div class="pricing-plan-one__single-inner">
+                                                    <div class="table-header text-center">
+                                                        <div class="category-wrapper">
+                                                            <h3>Premium Plan</h3>
+                                                        </div>
+                                                        <h2>$515.5</h2>
+                                                        <p>Per Month</p>
+                                                    </div>
+
+                                                    <div class="table-content">
+                                                        <ul>
+                                                            <li>
+                                                                <p>20% Off All Service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>4 Bedroom Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>5 Carpet Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Kitchen Cleaning</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> 24/7 Supports</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <a class="thm-btn" href="pricing.html">Choose Package
+                                                            <i class="icon-next"></i>
+                                                            <span class="hover-btn hover-bx"></span>
+                                                            <span class="hover-btn hover-bx2"></span>
+                                                            <span class="hover-btn hover-bx3"></span>
+                                                            <span class="hover-btn hover-bx4"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Single Pricing Plan One-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Single Tab Content-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Pricing Plan One-->
+
+        <!--Start Testimonial Two-->
+        <section class="testimonial-two">
+            <div class="testimonial-two__pattern"
+                style="background-image: url(assets/images/pattern/services-v2-pattern.png);"></div>
+            <div class="container">
+                <div class="sec-title sec-title-animation animation-style2">
+                    <div class="sec-title__tagline">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Testimonials</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">Clients Feedback About Their <br>
+                        Experience With Us
+                    </h2>
+                </div>
+
+                <div class="testimonial-two__carousel owl-carousel owl-theme">
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img1.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>Jhon Smith</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img2.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>Kevin Martin</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img3.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>David Cooper</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img1.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>Jhon Smith</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img2.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>Kevin Martin</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+
+                    <!--Start Testimonial Two Single-->
+                    <div class="testimonial-two__single">
+                        <div class="testimonial-two__single-quote">
+                            <span class="icon-quotation"></span>
+                        </div>
+                        <div class="testimonial-two__single-img">
+                            <img src="assets/images/testimonial/testimonial-v2-img3.jpg" alt="#">
+                        </div>
+                        <div class="testimonial-two__single-inner">
+                            <div class="title-box">
+                                <h3>David Cooper</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+
+                            <div class="text-box">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the
+                                    majority have suffered alteration in some form, by injected.</p>
+                            </div>
+                            <div class="rating-box">
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                                <a href="#"><i class="icon-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Testimonial Two Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Testimonials Two-->
+
+        <!--Start Counter One-->
+        <section class="counter-one counter-one--two">
+            <div class="shape1 scale"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape2 float-bob-x"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape3 rotated-style2"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape4 float-bob-y"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape5 rotated-style2"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape6 float-bob-x"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="shape7 scale"><img src="assets/images/shapes/counter-v2-shape1.png" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <!--Start Counter One Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__single-inner">
+                                <div class="counter-one__single-icon">
+                                    <span class="icon-trophy"></span>
+                                </div>
+
+                                <div class="counter-one__single-content">
+                                    <div class="count-box">
+                                        <h2 class="count-text" data-stop="655" data-speed="1500">00</h2>
+                                        <span class="k">k</span>
+                                        <span class="plus">+</span>
+                                    </div>
+                                    <p>Awards Win</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Counter One Single-->
+
+                    <!--Start Counter One Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__single-inner">
+                                <div class="counter-one__single-icon">
+                                    <span class="icon-verification"></span>
+                                </div>
+
+                                <div class="counter-one__single-content">
+                                    <div class="count-box">
+                                        <h2 class="count-text" data-stop="415" data-speed="1500">00</h2>
+                                        <span class="k">k</span>
+                                    </div>
+                                    <p>Completed Project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Counter One Single-->
+
+                    <!--Start Counter One Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__single-inner">
+                                <div class="counter-one__single-icon">
+                                    <span class="icon-customer-review"></span>
+                                </div>
+
+                                <div class="counter-one__single-content">
+                                    <div class="count-box">
+                                        <h2 class="count-text" data-stop="898" data-speed="1500">00</h2>
+                                        <span class="k">k</span>
+                                        <span class="plus">+</span>
+                                    </div>
+                                    <p>Happy Clients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Counter One Single-->
+
+                    <!--Start Counter One Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="counter-one__single style2">
+                            <div class="counter-one__single-inner">
+                                <div class="counter-one__single-icon">
+                                    <span class="icon-project-plan"></span>
+                                </div>
+
+                                <div class="counter-one__single-content">
+                                    <div class="count-box">
+                                        <h2 class="count-text" data-stop="558" data-speed="1500">00</h2>
+                                        <span class="k">k</span>
+                                        <span class="plus">+</span>
+                                    </div>
+                                    <p>Finish The Job</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Counter One Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Counter One-->
+
+        <!--Start Office Location-->
+        <section class="office-location">
+            <div class="container">
+                <div class="office-location__top">
+                    <div class="office-location__top-left">
+                        <div class="sec-title sec-title-animation animation-style2">
+                            <div class="sec-title__tagline">
+                                <div class="icon-box">
+                                    <span class="icon-household"></span>
+                                </div>
+
+                                <div class="text title-animation">
+                                    <h4>OUR Offices</h4>
+                                </div>
+                            </div>
+                            <h2 class="sec-title__title title-animation">Discover the Location of Our <br> Office and
+                                Visit Us Today
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="office-location__top-right">
+                        <p>Find our office location and stop by today—we’d love to see you!</p>
+                        <div class="btn-box">
+                            <a class="thm-btn" href="contact-1.html">Send Message
+                                <i class="icon-next"></i>
+                                <span class="hover-btn hover-bx"></span>
+                                <span class="hover-btn hover-bx2"></span>
+                                <span class="hover-btn hover-bx3"></span>
+                                <span class="hover-btn hover-bx4"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-location__bottom">
+                    <div class="office-location__pattern">
+                        <img src="assets/images/pattern/office-location-pattern.png" alt="">
+                    </div>
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img1.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Alexander City</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style2">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img2.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Birmingham</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style3">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img3.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>London</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style4">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img4.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Guntersville</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style5">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img5.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Montgomery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style6">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img6.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Colorado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+
+                    <!--Start Office Location Single-->
+                    <div class="office-location__single style7">
+                        <div class="office-location__markar">
+                            <i class="ripple"></i>
+                        </div>
+
+                        <div class="office-location__popup-box">
+                            <div class="office-location__popup">
+                                <div class="office-location__popup-inner">
+                                    <div class="office-location__popup-img">
+                                        <img src="assets/images/resources/office-location-img7.jpg" alt="">
+                                    </div>
+                                    <div class="office-location__popup-content">
+                                        <p>Cleaning service <br>
+                                            provider</p>
+                                        <span>Berlin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Office Location Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Office Location -->
+
+        <!--Start Video Two-->
+        <section class="video-two">
+            <div class="video-two__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                style="background-image: url(assets/images/backgrounds/video-v2-bg.jpg);"></div>
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+            <div class="container">
+                <div class="video-two__inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="video-two__box">
+                        <a href="https://www.youtube.com/watch?v=06dV9txztKY" class="video-popup">
+                            <div class="video-two__icon">
+                                <span class="icon-play-button-arrowhead"></span>
+                                <i class="ripple"></i>
+                            </div>
+                        </a>
+                        <span class="border-animation border-1"></span>
+                        <span class="border-animation border-2"></span>
+                        <span class="border-animation border-3"></span>
+                    </div>
+
+                    <div class="title-box">
+                        <h2>Hundreds of customers trust <br> our company</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Video Two-->
+
+        <!--Start Team Four -->
+        <section class="team-four">
+            <div class="team-four__pattern" style="background-image: url(assets/images/pattern/team-v4-pattern.png);">
+            </div>
+            <div class="container">
+                <div class="sec-title text-center sec-title-animation animation-style1">
+                    <div class="sec-title__tagline center">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Team Members</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">We Have a Expert Team <br>
+                        to Serve You.</h2>
+                </div>
+                <div class="row">
+                    <!--Start Team Four Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="team-four__single text-center">
+                            <div class="team-four__single-img">
+                                <div class="team-four__single-img-inner">
+                                    <img src="assets/images/team/team-v4-img1.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="team-four__single-content">
+                                <h2><a href="team-details.html">Robert Michale</a></h2>
+                                <p>Window Cleaner</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="icon-facebook-app-symbol"></span></a></li>
+                                    <li><a href="#"><span class="icon-twitter-1"></span></a></li>
+                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                    <li><a href="#"><span class="icon-linkedin-big-logo"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Team Four Single-->
+
+                    <!--Start Team Four Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInDown" data-wow-delay=".3s">
+                        <div class="team-four__single text-center">
+                            <div class="team-four__single-img">
+                                <div class="team-four__single-img-inner">
+                                    <img src="assets/images/team/team-v4-img2.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="team-four__single-content">
+                                <h2><a href="team-details.html">William Adams</a></h2>
+                                <p>Office Cleaner</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="icon-facebook-app-symbol"></span></a></li>
+                                    <li><a href="#"><span class="icon-twitter-1"></span></a></li>
+                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                    <li><a href="#"><span class="icon-linkedin-big-logo"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Team Four Single-->
+
+                    <!--Start Team Four Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="team-four__single text-center">
+                            <div class="team-four__single-img">
+                                <div class="team-four__single-img-inner">
+                                    <img src="assets/images/team/team-v4-img3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="team-four__single-content">
+                                <h2><a href="team-details.html">Martyn D Joseph</a></h2>
+                                <p>House Cleaner</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="icon-facebook-app-symbol"></span></a></li>
+                                    <li><a href="#"><span class="icon-twitter-1"></span></a></li>
+                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                    <li><a href="#"><span class="icon-linkedin-big-logo"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Team Four Single-->
+
+                    <!--Start Team Four Single-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInDown" data-wow-delay=".3s">
+                        <div class="team-four__single text-center">
+                            <div class="team-four__single-img">
+                                <div class="team-four__single-img-inner">
+                                    <img src="assets/images/team/team-v4-img4.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="team-four__single-content">
+                                <h2><a href="team-details.html">Serhii Ivanenko</a></h2>
+                                <p>Car Cleaner</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="icon-facebook-app-symbol"></span></a></li>
+                                    <li><a href="#"><span class="icon-twitter-1"></span></a></li>
+                                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                    <li><a href="#"><span class="icon-linkedin-big-logo"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Team Four Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Team Four -->
+
+        <!--Start Gallery One -->
+        <section class="gallery-one">
+            <div class="container-fluid">
+                <div class="sec-title text-center sec-title-animation animation-style1">
+                    <div class="sec-title__tagline center">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Our Gallery</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">Latest Photo Gallery</h2>
+                </div>
+                <div class="gallery-one__inner">
+                    <div class="gallery-one__carousel owl-carousel owl-theme thm-dot-style1">
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img1.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img1.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img2.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img2.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img3.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img3.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img4.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img4.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img5.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img5.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img1.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img1.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img2.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img2.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img3.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img3.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img4.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img4.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img5.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img5.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img1.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img1.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img2.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img2.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img3.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img3.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img4.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img4.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img5.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img5.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img1.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img1.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img2.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img2.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img3.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img3.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img4.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img4.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+
+                        <!--Start Gallery One Single-->
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__single-img">
+                                <img src="assets/images/resources/gallery-v1-img5.jpg" alt="">
+
+                                <div class="gallery-one__single-icon">
+                                    <a class="img-popup" href="assets/images/resources/gallery-v1-img5.jpg"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Gallery One Single-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Gallery One -->
+
+        <!--Start Why Choose Two-->
+        <section class="why-choose-two">
+            <div class="why-choose-two__bg"
+                style="background-image: url(assets/images/backgrounds/why-choose-v2-bg.jpg);"></div>
+            <div class="big-title">
+                why choose
+            </div>
+            <div class="container clearfix">
+                <div class="why-choose-two__inner">
+                    <div class="why-choose-two__content">
+                        <div class="sec-title sec-title-animation animation-style2">
+                            <div class="sec-title__tagline">
+                                <div class="icon-box">
+                                    <span class="icon-household"></span>
+                                </div>
+
+                                <div class="text title-animation">
+                                    <h4>Why Choose US?</h4>
+                                </div>
+                            </div>
+                            <h2 class="sec-title__title title-animation">Reasons to Choose Us
+                            </h2>
+                        </div>
+
+                        <div class="row filter-layout masonary-layout">
+                            <!--Start Why Choose Two Single-->
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="why-choose-two__single text-center">
+                                    <div class="why-choose-two__single-icon">
+                                        <span class="icon-costumer"></span>
+                                    </div>
+
+                                    <div class="why-choose-two__single-content">
+                                        <h2><a href="#">Professional Excellence</a></h2>
+                                        <p>It is a long established fact that a reader will be distracted by the</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Why Choose Two Single-->
+
+                            <!--Start Why Choose Two Single-->
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="why-choose-two__single mt30 text-center">
+                                    <div class="why-choose-two__single-icon">
+                                        <span class="icon-household"></span>
+                                    </div>
+
+                                    <div class="why-choose-two__single-content">
+                                        <h2><a href="#">Satisfaction Guarantee</a></h2>
+                                        <p>It is a long established fact that a reader will be distracted by the</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Why Choose Two Single-->
+
+                            <!--Start Why Choose Two Single-->
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="why-choose-two__single text-center">
+                                    <div class="why-choose-two__single-icon">
+                                        <span class="icon-cleaning-service"></span>
+                                    </div>
+
+                                    <div class="why-choose-two__single-content">
+                                        <h2><a href="#">Experienced Staff</a></h2>
+                                        <p>It is a long established fact that a reader will be distracted by the</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Why Choose Two Single-->
+
+                            <!--Start Why Choose Two Single-->
+                            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                                <div class="why-choose-two__single text-center">
+                                    <div class="why-choose-two__single-icon">
+                                        <span class="icon-live-chat"></span>
+                                    </div>
+
+                                    <div class="why-choose-two__single-content">
+                                        <h2><a href="#">24/7 Online Support</a></h2>
+                                        <p>It is a long established fact that a reader will be distracted by the</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Why Choose Two Single-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Why Choose Two-->
+
+        <!--Start Blog Three-->
+        <section class="blog-three blog-three--four">
+            <div class="container">
+                <div class="sec-title text-center sec-title-animation animation-style1">
+                    <div class="sec-title__tagline center">
+                        <div class="icon-box">
+                            <span class="icon-household"></span>
+                        </div>
+
+                        <div class="text title-animation">
+                            <h4>Blog & News</h4>
+                        </div>
+                    </div>
+                    <h2 class="sec-title__title title-animation">Get Latest News & Updates</h2>
+                </div>
+                <div class="row">
+                    <!--Start Blog Three Single-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="blog-three__single">
+                            <div class="blog-three__single-img">
+                                <img src="assets/images/blog/blog-v3-img1.jpg" alt="">
+                                <div class="date-box">
+                                    <p>15</p>
+                                    <span>NOV</span>
+                                </div>
+                                <ul class="blog-three__tag">
+                                    <li><a href="blog-details-right.html">Cleaning</a></li>
+                                    <li><a href="blog-details-right.html">Sparkling</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="blog-three__single-content">
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-people"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">By Admin</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-conversation"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">2 Comment</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h2><a href="blog-details-right.html">How Our Cleaning Agency <br> Makes a
+                                        Difference</a></h2>
+                                <p>It is a long established fact that a reader will be distracted by the
+                                    readable...</p>
+
+                                <div class="btn-box">
+                                    <a href="blog-details-right.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Three Single-->
+
+                    <!--Start Blog Three Single-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInRight" data-wow-delay="100ms"
+                        data-wow-duration="1500ms">
+                        <div class="blog-three__single">
+                            <div class="blog-three__single-img">
+                                <img src="assets/images/blog/blog-v3-img2.jpg" alt="">
+                                <div class="date-box">
+                                    <p>17</p>
+                                    <span>FEB</span>
+                                </div>
+                                <ul class="blog-three__tag">
+                                    <li><a href="blog-details-right.html">Moping</a></li>
+                                    <li><a href="blog-details-right.html">Sparkling</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="blog-three__single-content">
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-people"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">By Admin</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-conversation"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">2 Comment</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h2><a href="blog-details-right.html">Great Tips to Choose A <br> Professional
+                                        Cleaner</a>
+                                </h2>
+                                <p>It is a long established fact that a reader will be distracted by the
+                                    readable...</p>
+
+                                <div class="btn-box">
+                                    <a href="blog-details-right.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Three Single-->
+
+                    <!--Start Blog Three Single-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft" data-wow-delay="200ms"
+                        data-wow-duration="1500ms">
+                        <div class="blog-three__single">
+                            <div class="blog-three__single-img">
+                                <img src="assets/images/blog/blog-v3-img3.jpg" alt="">
+                                <div class="date-box">
+                                    <p>25</p>
+                                    <span>JUN</span>
+                                </div>
+                                <ul class="blog-three__tag">
+                                    <li><a href="blog-details-right.html">Sparkling</a></li>
+                                    <li><a href="blog-details-right.html">Cleaning</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="blog-three__single-content">
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-people"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">By Admin</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-conversation"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p><a href="#">2 Comment</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h2><a href="blog-details-right.html">Best Ways to Keep Your <br> House Fresh &
+                                        Clean</a></h2>
+                                <p>It is a long established fact that a reader will be distracted by the
+                                    readable...</p>
+
+                                <div class="btn-box">
+                                    <a href="blog-details-right.html">Read More <span class="icon-plus"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Three Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Blog Three-->
+
+        <!--Start Cta One -->
+        <section class="cta-one">
+            <div class="shape1"></div>
+            <div class="cta-one__bg" style="background-image: url(assets/images/backgrounds/cta-v1-bg.jpg);">
+            </div>
+            <div class="container clearfix">
+                <div class="cta-one__inner">
+                    <div class="cta-one__content">
+                        <div class="text-box sec-title-animation animation-style2">
+                            <p class="title-animation">Quality Services provider</p>
+                            <h2 class="title-animation">Need Our services?</h2>
+                        </div>
+
+                        <div class="btn-box">
+                            <a class="thm-btn" href="contact-1.html">get free quote
+                                <i class="icon-next"></i>
+                                <span class="hover-btn hover-bx"></span>
+                                <span class="hover-btn hover-bx2"></span>
+                                <span class="hover-btn hover-bx3"></span>
+                                <span class="hover-btn hover-bx4"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Cta One -->
 
 {% endblock %}
